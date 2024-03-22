@@ -6,6 +6,61 @@
 
     <link rel="stylesheet" href="/assets/normalize.css">
 
+    <style>
+
+        section{
+            width: 100vW;
+            height: 100vh;
+            background-color: blue;
+            position: relative;
+        }
+
+        section>div{
+            width: 250px;
+            aspect-ratio: 1/1;
+            border-radius: 100%;
+            background-color: gray;
+            color: white;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+
+        }
+
+        section>div::before{
+            content: "";
+            border: 15px solid white;
+            border-radius: 100%;
+            border-top-color: red;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        section>div:hover::before{
+            transform: rotate(360deg);
+            transition-duration: 3s;
+        }
+
+        section>div>div>h2{
+            width: fit-content;
+            height: fit-content;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+    </style>
+
 </head>
 <body>
 
