@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case-5</title>
+
+    <link rel="stylesheet" href="/assets/normalize.css">
+
+    <style>
+
+        main {
+            width: 50vw;
+            height: 50vh;
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        main>section {
+            display: flex;
+            width: 200vw;
+            animation-name: my-animation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        main>section>div {
+            width: 50vw;
+            height: 50vh;
+            background-color: orange;
+        }
+
+        main>section>div:first-child {
+            background-image: url("/assets/images/animation_slide/slide1.jpeg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        main>section>div:nth-child(2) {
+            background-image: url("/assets/images/animation_slide/slide2.jpeg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        main>section>div:nth-child(3) {
+            background-image: url("/assets/images/animation_slide/slide3.jpeg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        main>section>div:nth-child(4) {
+            background-image: url("/assets/images/animation_slide/slide4.jpeg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @keyframes my-animation {
+            15%, 35% {
+                transform: translateX(0%);
+            }
+
+            35%, 55% {
+                transform: translateX(-25%);
+            }
+            55%, 75% {
+                transform: translateX(-50%);
+            }
+            75%, 100% {
+                transform: translateX(-75%);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <main>
+
+        <section>
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
