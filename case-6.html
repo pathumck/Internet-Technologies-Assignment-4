@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case-6</title>
+
+    <link rel="stylesheet" href="/assets/normalize.css">
+
+    <style>
+
+        .sky {
+            height: 100vh;
+            width: 100vw;
+            background-image: url("/assets/images/Car_Animation_Img/sky.jpg");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .highway {
+            height: 200px;
+            width: 500%;
+            display: block;
+            background-image: url("/assets/images/Car_Animation_Img/road.jpg");
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            animation-name: highway;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+
+        .city {
+            height: 250px;
+            width: 500%;
+            background-image: url("/assets/images/Car_Animation_Img/city.png");
+            position: absolute;
+            bottom: 200px;
+            left: 0;
+            right: 0;
+            display: block;
+            z-index: 1;
+            background-repeat: repeat-x;
+            animation-name: city;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+
+        }
+
+        .car {
+            width: 400px;
+            left: 50%;
+            bottom: 100px;
+            transform: translateX(-50%);
+            position: absolute;
+            z-index: 2;
+        }
+
+        .wheel {
+            left: 50%;
+            bottom: 178px;
+            transform: translateX(50%);
+            position: absolute;
+            z-index: 2;
+        }
+
+        .frontwheel {
+            left: -165px;
+            position: absolute;
+            animation-iteration-count: infinite;
+            animation-duration: 10s;
+            animation-name: wheel;
+        }
+
+        .backwheel {
+            left: 80px;
+            position: absolute;
+            animation-iteration-count: infinite;
+            animation-duration: 10s;
+            animation-name: wheel;
+        }
+        
+        @keyframes highway {
+            100% {
+                transform: translateX(-3400px);
+            }
+        }
+
+        @keyframes city {
+            100% {
+                transform: translateX(-1400px);
+            }
+        }
+
+        @keyframes wheel {
+            100% {
+                transform: rotate(2880deg);
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+     <div class="sky">
+
+         <div class="highway"></div>
+
+         <div class="city"></div>
+
+         <div class="car">
+             <img src="/assets/images/Car_Animation_Img/car.png" width="400px">
+         </div>
+
+         <div class="wheel">
+             <img src="assets/images/Car_Animation_Img/wheel.png" class="frontwheel" width="70px">
+             <img src="assets/images/Car_Animation_Img/wheel.png" class="backwheel" width="70px">
+         </div>
+
+     </div>
+
+</body>
+
+</html>
