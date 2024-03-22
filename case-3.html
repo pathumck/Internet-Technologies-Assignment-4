@@ -6,6 +6,48 @@
 
     <link rel="stylesheet" href="/assets/normalize.css">
 
+    <style>
+        section {
+        }
+
+        section>div {
+            background-color: orangered;
+            width: 150px;
+            height: 75px;
+            animation-name: my-animation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+
+        @keyframes my-animation {
+            0% {
+                margin-left: 0;
+                margin-top: 0;
+            }
+            25% {
+                margin-left: calc(100vw - 150px);
+                margin-top: 0;
+                transform: rotate(180deg);
+                background-color: green;
+            }
+            50% {
+                margin-left: calc(100vw - 150px);
+                margin-top: calc(100vh - 60px);
+                transform: rotate(0deg);
+                background-color: blue;
+            }
+            75% {
+                margin-left: 0;
+                margin-top: calc(100vh - 60px);
+                transform: rotate(-180deg);
+                background-color: yellow;
+            }
+        }
+
+    </style>
+
 </head>
 <body>
 
